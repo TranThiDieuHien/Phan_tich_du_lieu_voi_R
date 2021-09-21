@@ -28,7 +28,7 @@ ggplot(data = alaska_flights,
 early_january_weather <- weather %>%
   filter(origin == "EWR" & month == 1 & day <= 15)
 ggplot(data = early_january_weather,
-       mapp?ng = aes(x = time_hour, y = temp)) +
+       mapping = aes(x = time_hour, y = temp)) +
   geom_line()
 
 #3.Ve do thi Histograms phan bo cua bien temp trong bang weather
