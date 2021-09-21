@@ -35,7 +35,7 @@ ggplot(data = early_january_weather,
 ggplot(data = weather, mapping = aes(x = temp)) +
   geom_histogram()
 
-#4.Ve bieu do boxplot mo ta su phan bo cua bien temp (nhiet do) theo ?ac thang
+#4.Ve bieu do boxplot mo ta su phan bo cua bien temp (nhiet do) theo cac thang
 ggplot(data = weather, mapping = aes(x = factor(month), y = temp)) +
   geom_boxplot()
 
