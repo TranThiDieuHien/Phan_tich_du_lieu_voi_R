@@ -5,7 +5,7 @@ igfdata <- juul$igf1
 head(igfdata)
 
 #Chuong 9: tr55-71: Phan tich thong ke mo ta
-#gia tri trung binh c???a age
+#gia tri trung binh cua age
 mean(igfdata, na.rm = TRUE)
 #phuong sai
 var(igfdata,na.rm = TRUE)
@@ -17,7 +17,7 @@ summary(igfdata)
 desc <- function(x)
 {
   av <- mean(x, na.rm = TRUE)
-  sd <- sd(x, na.rm = TR?E)
+  sd <- sd(x, na.rm = TRUE)
   se <- sd/sqrt(length(x))
   c(MEAN=av, SD=sd, SE=se)
 }
@@ -28,7 +28,7 @@ by(juul, age, summary)
 hist(igfdata)
 length(juul)
 #Thong ke mo ta theo tung nhom
-#Tinh trung binh cho mot bien so cho moi n?m va nu (theo 1 va 2)
+#Tinh trung binh cho mot bien so cho moi nam va nu (theo 1 va 2)
 tapply(igfdata, list(juul$sex), mean, na.rm = TRUE)
 
 #Kiem dinh t 1 mau
@@ -36,7 +36,7 @@ tapply(igfdata, list(juul$sex), mean, na.rm = TRUE)
 #Tinh gia tri t cho 100 mau voi do tin cay la 95%
 qt(0.95, 100)
 #nhanh gon hon bang t.test (mu: gt gia thuyet, age: bien so can kiem dinh)
-t.test(age, mu=3?)
+t.test(age, mu=30)
 
 #Kiem dinh t hai mau
 #VD 11
@@ -61,7 +61,7 @@ after <- c(170, 145, 145, 125, 205, 185, 150, 150, 145, 155)
 bp <- data.frame(before, after)
 # kiem dinh t
 t.test(before, after, paired=TRUE)
-#Chu y neu chung ta phan tich sai bang kiem dinh thong ke cho hai nhom doc lap duoi?day
+#Chu y neu chung ta phan tich sai bang kiem dinh thong ke cho hai nhom doc lap duoi day
 #thi tri so p = 0.32 cho biet muc do giam ap suat khong co y nghia thong ke!
 t.test(before, after)
 
@@ -69,7 +69,7 @@ t.test(before, after)
 wilcox.test(before, after, paired=TRUE)
 
 #Tan so (frequency)
-#Ham table cho chung ta biet ve ?an so cua mot bien so
+#Ham table cho chung ta biet ve tan so cua mot bien so
 #mang tinh phan loai nhu sex, tanner
 table(juul$sex)
 table(juul$tanner)
@@ -78,7 +78,7 @@ table(juul$sex, juul$tanner)
 #tinh so phan tram, chung ta su dung ham prop.table
 freq <- table(juul$sex, juul$tanner)
 #xem ket qua 
-margin.?able(freq, 1)
+margin.table(freq, 1)
 margin.table(freq, 2)
 #Tinh so phan tram
 #Tinh tanner cho tung sex
@@ -88,7 +88,7 @@ prop.table(freq, 2)
 
 #Kiem dinh ti le (proportion test, prop.test, binom.test)
 #VD 13
-#1: 621, 2: 713, vay ti le 1 la 0.4655 -> k?em dinh xem ti le nay co that su khac voi ti le 0.5 hay khong
+#1: 621, 2: 713, vay ti le 1 la 0.4655 -> kiem dinh xem ti le nay co that su khac voi ti le 0.5 hay khong
 #ta dung prop.test(x, n, ??)
 prop.test(46.55, 100, 0.50)
 #cach tinh chinh xac hon kiem dinh ti le la kiem dinh nhi phan bionom.test(x, n, ??)
@@ -108,7 +108,7 @@ female <- c( 291, 55, 34, 41, 124)
 total <- c(515, 103, 72, 81, 328)
 prop.test(female, total)
 
-#Kiem dinh chi ?inh phuong (Chi squared test, chisq.test)
+#Kiem dinh chi binh phuong (Chi squared test, chisq.test)
 chisq.test(juul$sex, juul$tanner)
 
 #Kiem dinh Fisher (Fisher???s exact test, fisher.test)
