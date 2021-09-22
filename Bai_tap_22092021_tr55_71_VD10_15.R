@@ -40,7 +40,7 @@ t.test(age, mu=30)
 
 #Kiem dinh t hai mau
 #VD 11
-#xem xet muc do khac biet trung binh giua hai nhom va ??o lech chuan cua ??o
+#xem xet muc do khac biet trung binh giua hai nhom va do lech chuan cua do
 #khac biet.
 t.test(igfdata~ juul$sex)
 #co li do de cho rang hai nhom co cung phuong sai, chung ta chi thay doi mot
@@ -111,14 +111,14 @@ prop.test(female, total)
 #Kiem dinh chi binh phuong (Chi squared test, chisq.test)
 chisq.test(juul$sex, juul$tanner)
 
-#Kiem dinh Fisher (Fisher???s exact test, fisher.test)
+#Kiem dinh Fisher ((Fisher’s exact test, fisher.test)
 fisher.test(juul$sex, juul$tanner, simulate.p.value=TRUE)
 
 #Phan tich hoi quy tuyen tinh
 #VD 15
 age <- c(46,20,52,30,57,25,28,36,22,43,57,33,22,63,40,48,28,49)
 bmi <-c(25.4,20.6,26.2,22.6,25.4,23.1,22.7,24.9,19.8,25.3,23.2,
-     ?  21.8,20.9,26.7,26.4,21.2,21.2,22.8)
+          21.8,20.9,26.7,26.4,21.2,21.2,22.8)
 chol <- c(3.5,1.9,4.0,2.6,4.5,3.0,2.9,3.8,2.1,3.8,4.1,3.0,
           2.5,4.6,3.2, 4.2,2.3,4.0)
 data <- data.frame(age, bmi, chol)
