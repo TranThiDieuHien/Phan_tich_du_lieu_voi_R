@@ -23,7 +23,7 @@ desc <- function(x)
 }
 desc(igfdata)
 #tom luoc theo age
-by(juul, age, summary)
+by(juul, juul$age, summary)
 #Ve do thi phan phoi cho bien so igfdata
 hist(igfdata)
 length(juul)
