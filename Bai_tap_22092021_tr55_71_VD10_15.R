@@ -56,7 +56,7 @@ wilcox.test(igfdata~ juul$sex)
 #Kiem dinh t cho cac bien so theo cap (paired t-test, t.test)
 #VD 12
 # nhap du kien
-before <- c(180, 140, 160, 160? 220, 185, 145, 160, 160, 170)
+before <- c(180, 140, 160, 160,220, 185, 145, 160, 160, 170)
 after <- c(170, 145, 145, 125, 205, 185, 150, 150, 145, 155)
 bp <- data.frame(before, after)
 # kiem dinh t
